@@ -20,6 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name = "CoordinatesSource"/>
+        <activity android:name="helperPage"/>
+        <activity android:name="NameEntry2"/>
+        <activity android:name="Organiser"/>
+        <activity android:name="MainPageOrg"/>
     </application>
 
 </manifest>
