@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Organizerpage" />
+        <activity android:name=".createOrg" />
         <activity android:name=".organiserPage" />
         <activity android:name=".orgJoin" />
         <activity android:name=".NameEntry" />

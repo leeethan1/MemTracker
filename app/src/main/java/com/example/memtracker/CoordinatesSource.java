@@ -1,3 +1,5 @@
+package com.example.memtracker;
+
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -9,8 +11,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-
-import com.example.memtracker.R;
 
 public class CoordinatesSource extends AppCompatActivity {
 

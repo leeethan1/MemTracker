@@ -1,12 +1,14 @@
-import android.os.Bundle;
+package com.example.memtracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainPageOrg extends AppCompatActivity {
+import android.os.Bundle;
+
+public class createOrg extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_page_org);
+        setContentView(R.layout.activity_createOrg);
     }
 }

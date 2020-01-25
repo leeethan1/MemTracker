@@ -1,3 +1,5 @@
+package com.example.memtracker;
+
 import java.io.Serializable;
 
 /**

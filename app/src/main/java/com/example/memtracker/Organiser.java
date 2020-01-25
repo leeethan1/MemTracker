@@ -1,4 +1,5 @@
-import java.io.Serializable;
+package com.example.memtracker;
+
 import java.util.ArrayList;
 
 /**
