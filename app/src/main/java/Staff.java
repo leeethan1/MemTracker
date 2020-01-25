@@ -6,24 +6,22 @@ import java.io.Serializable;
  */
 public class Staff extends Person {
 
-    public Staff(String name, int age) throws NullPointerException, IllegalArgumentException {
-        super(name,age);
+    public Staff(String name) throws NullPointerException, IllegalArgumentException {
+        super(name);
 
         if (name.equals(null)) throw new NullPointerException();
-        if (age < 0) throw new IllegalArgumentException();
     }
 
     public boolean equals(Object object) {
         if (object instanceof Staff) {
-            return ((Staff) object).getName().equals(this.getName()) && ((Staff) object).getAge() == this.getAge();
+            return ((Staff) object).getName().equals(this.getName());
         } else return false;
     }
 
     public String toString() {
-        int a = getAge();
         String n = getName();
 
-        String s = "Staff[" + n + ", " + a + "]";
+        String s = "Staff[" + n + "]";
         return s;
     }
 }
