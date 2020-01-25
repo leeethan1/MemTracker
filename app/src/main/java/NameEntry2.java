@@ -5,6 +5,8 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.memtracker.R;
+
 public class NameEntry2 extends AppCompatActivity {
 
     @Override
@@ -16,6 +18,7 @@ public class NameEntry2 extends AppCompatActivity {
     public void onClick(View view) {
         Intent i = new Intent(NameEntry2.this, helperPage.class);
         startActivity(i);
+
 
         Intent b = new Intent(NameEntry2.this, helperPage.class);
         EditText input = findViewById(R.id.Name);

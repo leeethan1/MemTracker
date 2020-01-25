@@ -5,6 +5,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.memtracker.R;
+
 public class organiserPage extends AppCompatActivity {
 
     TextView name;
@@ -22,10 +24,10 @@ public class organiserPage extends AppCompatActivity {
     }
 
     public void Creator(View view) {
-        Intent i = new Intent(organiserPage.this, createProfile.class);
+        Intent i = new Intent(organiserPage.this, Organiser.class);
         startActivity(i);
 
-        Intent b = new Intent(organiserPage.this, createProfile.class);
+        Intent b = new Intent(organiserPage.this, Organiser.class);
         b.putExtra("orgKey2", name.getText().toString());
         startActivity(b);
     }

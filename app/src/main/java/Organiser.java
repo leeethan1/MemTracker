@@ -35,4 +35,6 @@ public class Organiser extends Person {
         String s = "Organiser[" + n + "]";
         return s;
     }
+
+
 }

@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.memtracker">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,26 +15,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".LogoPage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Organizerpage" />
-        <activity android:name="organiserPage" />
-        <activity android:name="orgJoin" />
-        <activity android:name="NameEntry" />
+        <activity android:name=".organiserPage" />
+        <activity android:name=".orgJoin" />
+        <activity android:name=".NameEntry" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-
-        <activity android:name = "CoordinatesSource"/>
-        <activity android:name="helperPage"/>
-        <activity android:name="NameEntry2"/>
-        <activity android:name="Organiser"/>
-        <activity android:name="MainPageOrg"/>
+        <activity android:name=".CoordinatesSource" />
+        <activity android:name=".helperPage" />
+        <activity android:name=".NameEntry2" />
+        <activity android:name=".Organiser" />
+        <activity android:name=".MainPageOrg" />
     </application>
 
 </manifest>
