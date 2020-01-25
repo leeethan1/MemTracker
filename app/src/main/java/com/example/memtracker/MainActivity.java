@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClick(View view){
+    public void toOrganizerLyt(View view){
         Intent i = new Intent(MainActivity.this, Organizerpage.class);
+        startActivity(i);
     }
 }
