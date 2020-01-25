@@ -23,5 +23,9 @@ public class NameEntry extends AppCompatActivity {
         EditText input = findViewById(R.id.Name);
         b.putExtra("orgKey", input.getText().toString());
         startActivity(b);
+
+        Intent c = new Intent(NameEntry.this, organiserPage.class);
+        c.putExtra("orgKeyIan", input.getText().toString());
+        startActivity(c);
     }
 }
