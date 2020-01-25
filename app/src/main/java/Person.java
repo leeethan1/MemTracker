@@ -7,18 +7,11 @@ import java.io.Serializable;
 public class Person implements Serializable {
 
     private String name;
-    private int age;
 
-    public Person(String name, int age) throws NullPointerException, IllegalArgumentException {
+    public Person(String name) throws NullPointerException, IllegalArgumentException {
         this.name = name;
-        this.age = age;
 
         if (name.equals(null)) throw new NullPointerException();
-        if (age < 0) throw new IllegalArgumentException();
-    }
-
-    public int getAge() {
-        return this.age;
     }
 
     public String getName() {
@@ -28,15 +21,14 @@ public class Person implements Serializable {
     public boolean equals(Object object) {
 
         if (object instanceof Person) {
-            return ((Person) object).name.equals(this.name) && ((Person) object).age == this.age;
+            return ((Person) object).name.equals(this.name);
         } else return false;
     }
 
     public String toString() {
-        int a = getAge();
         String n = getName();
 
-        String s = "Person[" + n + ", " + a + "]";
+        String s = "Person[" + n + "]";
         return s;
     }
 }
