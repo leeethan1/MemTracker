@@ -2,10 +2,16 @@ package com.example.memtracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -13,7 +19,7 @@ import org.w3c.dom.Text;
 public class MainPageHelp extends AppCompatActivity {
     TextView name;
     Button button;
-    Button clickButton = (Button) findViewById(R.id.clickButton);
+    Button clickButton;
 
 
     @Override
@@ -40,5 +46,12 @@ public class MainPageHelp extends AppCompatActivity {
         startActivity(sendIntent);*/
 
     }
+
+    public void onClick2(View v){
+        clickButton = findViewById(R.id.clickButton);
+        Intent j = new Intent(MainPageHelp.this,Listing.class);
+        startActivity(j);
+    }
+
 
 }
