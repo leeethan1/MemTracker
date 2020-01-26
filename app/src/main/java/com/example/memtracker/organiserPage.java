@@ -27,13 +27,13 @@ public class organiserPage extends AppCompatActivity {
     }
 
     public void Creator(View view) {
-        Intent i = new Intent(organiserPage.this, MainPageOrg.class);
-        i.putExtra("orgkey2", name.getText().toString());
+        Intent i = new Intent(organiserPage.this, createOrg.class);
+        //i.putExtra("orgkey2", name.getText().toString());
         startActivity(i);
 
-//        Intent b = new Intent(organiserPage.this, MainPageOrg.class);
-//        b.putExtra("orgKey2", name.getText().toString());
-//        startActivity(b);
+        Intent b = new Intent(organiserPage.this, createOrg.class);
+        b.putExtra("toCreate", name.getText().toString());
+        startActivity(b);
     }
 
     public void Joiner(View view) {
@@ -41,7 +41,7 @@ public class organiserPage extends AppCompatActivity {
 //        startActivity(j);
 //
 //        Intent c = new Intent(organiserPage.this, orgJoin.class);
-//        c.putExtra("orgKey3", nameOfUser);
+//        c.putExtra("toJoin", nameOfUser);
 //        startActivity(c);
     }
 }
