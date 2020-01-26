@@ -57,7 +57,7 @@
         app:srcCompat="@drawable/tracc" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/clickButton"
         android:layout_width="177dp"
         android:layout_height="87dp"
         android:onClick="onClick"
@@ -88,7 +88,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86"
-    android:background="@drawable/txt_view_bg" />
-
+        app:layout_constraintVertical_bias="0.86"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

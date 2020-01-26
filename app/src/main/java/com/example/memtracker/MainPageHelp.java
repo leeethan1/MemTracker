@@ -13,6 +13,8 @@ import org.w3c.dom.Text;
 public class MainPageHelp extends AppCompatActivity {
     TextView name;
     Button button;
+    Button clickButton = (Button) findViewById(R.id.clickButton);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
