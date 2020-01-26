@@ -20,11 +20,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Listing">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Main2Activity"></activity>
         <!--
@@ -44,6 +39,11 @@
         <activity android:name=".helpJoin" />
         <activity android:name=".createOrg" />
         <activity android:name=".LogoPage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".organiserPage" />
         <activity android:name=".orgJoin" />

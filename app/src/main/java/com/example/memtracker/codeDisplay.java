@@ -55,6 +55,7 @@ public class codeDisplay extends AppCompatActivity {
 
         displayWindow = findViewById(R.id.displayWindow);
         displayWindow.setText(code);
+        System.out.println(code);
     }
 
     public void Manager(View view) {
