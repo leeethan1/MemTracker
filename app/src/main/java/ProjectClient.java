@@ -1,9 +1,9 @@
-//import javax.swing.*;
-//import java.io.IOException;
-//import java.io.ObjectInputStream;
-//import java.io.ObjectOutputStream;
-//import java.net.Socket;
-//import java.util.ArrayList;
+import javax.swing.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+import java.util.ArrayList;
 
 
 /**
@@ -13,10 +13,11 @@
 
 public class ProjectClient {
 
-//    private static Socket socket;
-//    private static ObjectOutputStream outputStream;
-//    private static ObjectInputStream inputStream;
-//
+    private static Socket socket;
+    private static ObjectOutputStream outputStream;
+    private static ObjectInputStream inputStream;
+
+
 //    public static String hostnameInput() { //don't shout at me for using GUIs I tried my best okay
 //
 //        return JOptionPane.showInputDialog(null, "Please enter a Hostname",

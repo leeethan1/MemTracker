@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class codeDisplay extends AppCompatActivity {
 
     TextView name;
@@ -24,6 +26,11 @@ public class codeDisplay extends AppCompatActivity {
         name.setText(nameOfUser);
 
         int code;
+        Random random = new Random();
+        do {
+            code = random.nextInt(1000000);
+        } while (code < 99999);
+
         displayWindow = findViewById(R.id.displayWindow);
 
     }
