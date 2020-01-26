@@ -1,6 +1,3 @@
-import com.example.memtracker.Event;
-
-import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
@@ -11,7 +8,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * @author Abhiram Saran
@@ -38,7 +34,9 @@ public class ProjectServer {
             ss = new ServerSocket(port);
 
             while (true) {
+                System.out.printf("Created server");
                 Socket a = ss.accept();
+                System.out.println("Thank fuck");
                 ClientHandler ch = new ClientHandler(this, a);
             }
         } catch (IOException e) {

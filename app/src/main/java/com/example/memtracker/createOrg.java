@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class createOrg extends AppCompatActivity {
-
+    EditText orgName;
+    String eventName;
     TextView name;
 
     @Override
@@ -22,6 +24,10 @@ public class createOrg extends AppCompatActivity {
         String nameOfUser = intent.getStringExtra("toCreate");
 
         name.setText(nameOfUser);
+
+        orgName = findViewById(R.id.NameEvent);
+        eventName = orgName.getText().toString();
+
     }
 
     public void Display(View view) {
@@ -30,6 +36,7 @@ public class createOrg extends AppCompatActivity {
 
         Intent b = new Intent(createOrg.this, codeDisplay.class);
         b.putExtra("toDisplay", name.getText().toString());
+        b.putExtra("getNameOrg", eventName);
         startActivity(b);
     }
 
