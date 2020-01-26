@@ -1,6 +1,7 @@
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -14,7 +15,7 @@ import java.util.Random;
  * @version 1/25/2020
  */
 
-public class Event {
+public class Event implements Serializable {
     private Random eventCodeGenerator = new Random();
     private String organizer;
     private String eventName;

@@ -23,12 +23,12 @@ public class NameEntry extends AppCompatActivity {
 
     public void onClick(View view) {
         Intent i = new Intent(NameEntry.this, organiserPage.class);
-        i.putExtra("orgkey", input.getText().toString());
+//        i.putExtra("orgkey", input.getText().toString());
         startActivity(i);
 
-//        Intent b = new Intent(NameEntry.this, organiserPage.class);
-//        b.putExtra("orgKey", input.getText().toString());
-//        startActivity(b);
+        Intent b = new Intent(NameEntry.this, organiserPage.class);
+        b.putExtra("orgKey", input.getText().toString());
+        startActivity(b);
 
     }
 }
