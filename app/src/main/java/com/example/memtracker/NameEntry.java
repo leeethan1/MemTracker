@@ -7,6 +7,8 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.memtracker.R;
+
 public class NameEntry extends AppCompatActivity {
 
     EditText input;
@@ -18,8 +20,6 @@ public class NameEntry extends AppCompatActivity {
         input = findViewById(R.id.Name);
 
     }
-
-
 
     public void onClick(View view) {
         Intent i = new Intent(NameEntry.this, organiserPage.class);

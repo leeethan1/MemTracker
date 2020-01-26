@@ -7,6 +7,8 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.memtracker.R;
+
 public class NameEntry2 extends AppCompatActivity {
 
     @Override

@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.memtracker.R;
+
 public class orgJoin extends AppCompatActivity {
 
     TextView name;
@@ -26,7 +28,7 @@ public class orgJoin extends AppCompatActivity {
         name = (TextView)findViewById(R.id.Name);
         name.setText(placeholder);
 
-        CodeID = findViewById(R.id.labelID);
+        CodeID = findViewById(R.id.labelId);
         Opassword = findViewById(R.id.labelPassword);
         String enteredID = CodeID.getText().toString();
         String password = Opassword.getText().toString();
