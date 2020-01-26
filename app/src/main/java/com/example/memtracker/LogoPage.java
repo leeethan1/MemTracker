@@ -26,6 +26,6 @@ public class LogoPage extends AppCompatActivity {
                 finish();
 
             }
-        },10000);
+        },4000);
     }
 }
