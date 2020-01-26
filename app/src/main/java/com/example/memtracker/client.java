@@ -23,7 +23,7 @@ public class client extends AsyncTask<Void, Void, Void> {
     protected Void doInBackground(Void... params) {
         try {
             System.out.println("trying to connect");
-            socket = new Socket("127.0.0.1", 8000); // connect to the server
+            socket = new Socket("10.0.2.2", 8080); // connect to the server
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
 
@@ -35,6 +35,7 @@ public class client extends AsyncTask<Void, Void, Void> {
             oos.flush();
 
             message = (String) ois.readObject();
+            System.out.println(message);
 
             ois.close();
             oos.close();

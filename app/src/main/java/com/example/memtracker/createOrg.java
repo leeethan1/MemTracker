@@ -25,12 +25,15 @@ public class createOrg extends AppCompatActivity {
 
         name.setText(nameOfUser);
 
+        System.out.println(nameOfUser);
+
         orgName = findViewById(R.id.NameEvent);
-        eventName = orgName.getText().toString();
 
     }
 
     public void Display(View view) {
+        eventName = orgName.getText().toString();
+        System.out.println(eventName);
         Intent i = new Intent(createOrg.this, codeDisplay.class);
         startActivity(i);
 

@@ -19,6 +19,7 @@ public class codeDisplay extends AppCompatActivity {
     TextView displayWindow;
     String nameOfEvent;
     String nameOfUser;
+    client clientTask;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,12 +30,21 @@ public class codeDisplay extends AppCompatActivity {
 
         nameOfUser = intent.getStringExtra("toDisplay");
         nameOfEvent = intent.getStringExtra("getNameOrg");
+        System.out.println(nameOfEvent);
+        System.out.println(nameOfUser);
 
         name.setText(nameOfUser);
 
-        client clientTask = new client(nameOfEvent, nameOfUser);
+        clientTask = new client(nameOfEvent, nameOfUser);
+
         clientTask.execute();
+        try {
+            Thread.sleep(500);
+        } catch (Exception e) {
+
+        }
         code = clientTask.getMessage();
+        System.out.println(code);
     }
 
     public void onClick(View view) {

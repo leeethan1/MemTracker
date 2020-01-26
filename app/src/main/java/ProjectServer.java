@@ -1,13 +1,18 @@
+import java.io.BufferedReader;
+import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.PriorityQueue;
+import java.io.File;
 
 /**
  * @author Abhiram Saran
@@ -16,75 +21,69 @@ import java.util.Map;
 
 public class ProjectServer {
 
-    public static final int port = 8000;
+    public static final int port = 8080;
     public ServerSocket ss;
+
+    public ProjectServer() throws IOException{
+        ss = new ServerSocket(port);
+    }
 
     public static void main(String[] args) {
         ProjectServer server;
 
         try {
-            server = new ProjectServer();
+            ProjectServer rs = new ProjectServer();
+            rs.serveClients();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public ProjectServer() {
-        try {
-            ss = new ServerSocket(port);
+    public void serveClients() {
+        Socket clientSocket;
+        Thread handlerThread;
+        int clientCount = 0;
 
-            while (true) {
-                System.out.printf("Created server");
-                Socket a = ss.accept();
-                System.out.println("Thank fuck");
-                ClientHandler ch = new ClientHandler(this, a);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        System.out.printf("<Now serving clients on port 8080>");
+
+        while (true) {
+            try {
+                clientSocket = this.ss.accept();
+            } catch (IOException e) {
+                e.printStackTrace();
+
+                return;
+            } //end try catch
+
+            handlerThread = new Thread(new ClientHandler(clientSocket));
+
+            handlerThread.start();
+
+            System.out.printf("<Client %d connected...>%n", clientCount);
+
+            clientCount++;
         }
     }
 
-//    public boolean equals(Object object) {      //is it necessary? no. does it boost my self esteem? yes.
-//                                                //delete this function and I delete your family
-//        if (this == object) {
-//            return true;
-//        } else if (object instanceof ProjectServer) {
-//            return Objects.equals(this.ss, ((ProjectServer) object).ss);
-//        } else {
-//            return false;
-//        }
-//    }
-
-//    public String toString() {
-//        String format = "ProjectServer[%s]";
-//        return String.format(format, this.ss);
-//    }
 }
-
 /**
  * @author Abhiram Saran
  * @version 25 Jan 2020
  */
 
-class ClientHandler implements Runnable {   //I don't know if we'll need a client handler but it's 5 AM and at this point
-    //I don't give a shit we did it for one of the homeworks
+class ClientHandler implements Runnable {
     private Socket socket;
-    private ProjectServer server;
-    private int clientNumber = 0;
     private HashMap<Event, String> events = new HashMap<Event, String>();
     private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     private static final int CODE_LENGTH = 8;
 
 
-    public ClientHandler(ProjectServer server, Socket clientSocket) throws NullPointerException {
+    public ClientHandler(Socket clientSocket) throws NullPointerException {
         this.socket = clientSocket;
-        this.server = server;
-        clientNumber++;
     }
 
     public void run() {
-
-        System.out.println("Serving client #" + clientNumber + "\tConnected to " + socket + "\n");
+        System.out.println("fml");
 
         try {
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
@@ -93,26 +92,33 @@ class ClientHandler implements Runnable {   //I don't know if we'll need a clien
             String line;
             Event ev;
 
-            FileInputStream fileIn = new FileInputStream("eventlist.txt");
-            ObjectInputStream objectIn = new ObjectInputStream(fileIn);
-            Object event;
+//            FileInputStream fileIn = new FileInputStream("eventlist.txt");
+//            ObjectInputStream objectIn = new ObjectInputStream(fileIn);
+//            Object event;
+//
+//            fileIn.close();
+//            objectIn.close();
 
-            fileIn.close();
-            objectIn.close();
-
-            while ((event = objectIn.readObject()) != null) {
-                events.put((Event) event, (String) objectIn.readObject());
-            }
+//            while ((event = objectIn.readObject()) != null) {
+//                events.put((Event) event, (String) objectIn.readObject());
+//            }
 
             while ((line = (String) ois.readObject()) != null) {
+                System.out.println(line);
                 switch (line) {
                     case "CREATE":
                         line = (String) ois.readObject();
+                        System.out.println(line);
                         ev = new Event(line);
                         for (int i = 0; i < CODE_LENGTH; i++) {
-                            eventCode.append((int) Math.random() * ALPHA_NUMERIC_STRING.length());
+                            eventCode.append(ALPHA_NUMERIC_STRING.charAt(
+                                    (int) (Math.random() * ALPHA_NUMERIC_STRING.length())
+                            ));
                         }
-                        ev.setOrganizer((String) ois.readObject());
+                        System.out.println(eventCode);
+                        line = (String) ois.readObject();
+                        System.out.println(line);
+                        ev.setOrganizer(line);
                         events.put(ev, eventCode.toString());
 
                         oos.writeObject(eventCode.toString());
@@ -138,21 +144,24 @@ class ClientHandler implements Runnable {   //I don't know if we'll need a clien
 
                 }
             }
-            FileWriter fw = new FileWriter("eventlist.txt", false);
-            fw.close();
-            FileOutputStream fos = new FileOutputStream("eventlist.txt");
-            ObjectOutputStream obstream = new ObjectOutputStream(fos);
+            ois.close();
+            oos.close();
 
-            for (Map.Entry<Event, String> entry : events.entrySet()) {
-                obstream.writeObject(entry.getKey());
-                obstream.flush();
-                obstream.writeObject(entry.getValue());
-                obstream.flush();
-            }
+//            FileOutputStream fos = new FileOutputStream("eventlist.txt");
+//            ObjectOutputStream obstream = new ObjectOutputStream(fos);
+//
+//            for (Map.Entry<Event, String> entry : events.entrySet()) {
+//                obstream.writeObject(entry.getKey());
+//                obstream.flush();
+//                obstream.writeObject(entry.getValue());
+//                obstream.flush();
+//            }
 
-            fos.close();
-            obstream.close();
+//            fos.close();
+//            obstream.close();
 
+        } catch (EOFException e) {
+            System.out.println("DONE!");
         } catch (Exception e) {
             e.printStackTrace();
         }
