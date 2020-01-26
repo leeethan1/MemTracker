@@ -30,23 +30,15 @@ public class orgJoin extends AppCompatActivity {
 
         CodeID = findViewById(R.id.Code);
         String enteredID = CodeID.getText().toString();
-        int codeCheck = Integer.parseInt(enteredID);
     }
 
     public void onRight(View view){
-        String enteredID = CodeID.getText().toString();
-        int codeCheck = Integer.parseInt(enteredID);
+        Intent i = new Intent(orgJoin.this, Main2Activity.class);
+        startActivity(i);
 
-        if (codeCheck == 124421) {
-            Intent i = new Intent(orgJoin.this, MainPageOrg.class);
-            startActivity(i);
+        Intent b = new Intent(orgJoin.this, Main2Activity.class);
+        b.putExtra("toManage", name.getText().toString());
+        startActivity(b);
 
-            Intent b = new Intent(orgJoin.this, MainPageOrg.class);
-            b.putExtra("toManage", name.getText().toString());
-            startActivity(b);
-        }
-        else{
-            //Nothing
-        }
     }
 }

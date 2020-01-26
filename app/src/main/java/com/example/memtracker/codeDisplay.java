@@ -48,17 +48,9 @@ public class codeDisplay extends AppCompatActivity {
     }
 
     public void Manager(View view) {
-        Intent i = new Intent(codeDisplay.this, MainPageOrg.class);
-        //i.putExtra("orgkey2", name.getText().toString());
+        Intent i = new Intent(codeDisplay.this, Main2Activity.class);
         startActivity(i);
 
-        Intent b = new Intent(codeDisplay.this, MainPageOrg.class);
-        b.putExtra("toManage", name.getText().toString());
-        startActivity(b);
-
-        Intent c = new Intent(codeDisplay.this, MainPageOrg.class);
-        b.putExtra("toManage2", name.getText().toString());
-        startActivity(c);
     }
 
 }

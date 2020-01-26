@@ -24,7 +24,7 @@ public class NameEntry2 extends AppCompatActivity {
 
         Intent b = new Intent(NameEntry2.this, helperPage.class);
         EditText input = findViewById(R.id.Name);
-        b.putExtra("key", input.getText().toString());
+        b.putExtra("toJoinUp", input.getText().toString());
         startActivity(b);
     }
 }

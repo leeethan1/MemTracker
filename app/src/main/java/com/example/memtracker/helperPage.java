@@ -3,6 +3,7 @@ package com.example.memtracker;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +17,7 @@ public class helperPage extends AppCompatActivity {
         setContentView(R.layout.activity_helper_page);
 
         Intent intent = getIntent();
-        String placeholder = intent.getStringExtra("key");
+        String placeholder = intent.getStringExtra("toJoinUp");
         name = (TextView) findViewById(R.id.Name);
         name.setText(placeholder);
     }
@@ -24,5 +25,10 @@ public class helperPage extends AppCompatActivity {
     public void onClick(View view) {
         Intent j = new Intent(helperPage.this, helpJoin.class);
         startActivity(j);
+
+        Intent b = new Intent(helperPage.this, MainPageHelp.class);
+        EditText input = findViewById(R.id.Name);
+        b.putExtra("toJoinUp2", input.getText().toString());
+        startActivity(b);
     }
 }
