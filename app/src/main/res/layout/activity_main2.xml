@@ -16,7 +16,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@color/colorAccent" />
+        app:srcCompat="#EC6433" />
 
     <TextView
         android:id="@+id/Name"
@@ -31,36 +31,40 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
+
     <Button
         android:id="@+id/button2"
         android:layout_width="177dp"
         android:layout_height="87dp"
+        android:background="#EC6433"
         android:onClick="onClick"
-        android:text="Click Here for Location"
+        android:text="TRACK"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86" />
+        app:layout_constraintVertical_bias="0.872" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="177dp"
         android:layout_height="87dp"
+        android:background="@drawable/oval"
         android:onClick="onClick"
         android:text="RALLY"
-        android:textSize="30dp"
         android:textColor="#FFFFFF"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86"
-        android:background="@drawable/oval" />
-
+        app:layout_constraintVertical_bias="0.678" />
 
     <ImageView
         android:id="@+id/imageView4"

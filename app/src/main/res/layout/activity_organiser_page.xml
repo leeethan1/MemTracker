@@ -16,7 +16,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@color/colorAccent" />
+        app:srcCompat="#EC6433" />
 
     <TextView
         android:id="@+id/label"
@@ -35,6 +35,7 @@
         android:id="@+id/create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#EC6433"
         android:onClick="Creator"
         android:text="Create A New Event"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,10 +48,10 @@
         android:id="@+id/existing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#EC6433"
         android:onClick="Joiner"
         android:text="Join an Existing Event"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
