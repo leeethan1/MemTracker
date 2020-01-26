@@ -26,4 +26,5 @@ public class codeDisplay extends AppCompatActivity {
         displayWindow = findViewById(R.id.displayWindow);
 
     }
+
 }
