@@ -55,7 +55,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toOrganizerLyt(View view){
-        Intent i = new Intent(MainActivity.this, createOrg.class);
+        Intent i = new Intent(MainActivity.this, NameEntry.class);
         startActivity(i);
+    }
+
+    public void tohelperrLyt(View view){
+        Intent j = new Intent(MainActivity.this, NameEntry2.class);
+        startActivity(j);
     }
 }

@@ -31,6 +31,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="64dp"
+        android:onClick="tohelperrLyt"
         android:text="Helper"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
