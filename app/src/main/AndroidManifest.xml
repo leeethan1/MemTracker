@@ -15,21 +15,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".createOrg"></activity>
         <activity android:name=".LogoPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".createOrg" />
         <activity android:name=".organiserPage" />
         <activity android:name=".orgJoin" />
         <activity android:name=".NameEntry" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".CoordinatesSource" />
         <activity android:name=".helperPage" />
         <activity android:name=".NameEntry2" />
