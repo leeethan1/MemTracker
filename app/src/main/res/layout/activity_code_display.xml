@@ -45,7 +45,7 @@
         app:layout_constraintVertical_bias="0.0"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Generate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hit this Button to Get Your Code"
@@ -56,9 +56,10 @@
         app:layout_constraintVertical_bias="0.8" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/toManage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="Manager"
         android:text="Start Managing"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
