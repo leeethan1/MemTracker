@@ -5,6 +5,8 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.memtracker.R;
+
 public class NameEntry extends AppCompatActivity {
 
     @Override
@@ -12,8 +14,6 @@ public class NameEntry extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name_entry);
     }
-
-
 
     public void onClick(View view) {
         Intent i = new Intent(NameEntry.this, organiserPage.class);
