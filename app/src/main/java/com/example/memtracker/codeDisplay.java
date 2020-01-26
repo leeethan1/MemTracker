@@ -9,6 +9,7 @@ import android.widget.TextView;
 public class codeDisplay extends AppCompatActivity {
 
     TextView name;
+    TextView displayWindow;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +21,9 @@ public class codeDisplay extends AppCompatActivity {
         String nameOfUser = intent.getStringExtra("orgKey");
 
         name.setText(nameOfUser);
+
+        int code;
+        displayWindow = findViewById(R.id.displayWindow);
+
     }
 }
