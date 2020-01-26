@@ -41,7 +41,7 @@ public class organiserPage extends AppCompatActivity {
         startActivity(j);
 
         Intent c = new Intent(organiserPage.this, orgJoin.class);
-        c.putExtra("toJoin", nameOfUser);
+        c.putExtra("toJoin", name.getText().toString() );
         startActivity(c);
     }
 }

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -15,7 +16,6 @@ public class orgJoin extends AppCompatActivity {
 
     TextView name;
     EditText CodeID;
-    EditText Opassword;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -24,18 +24,29 @@ public class orgJoin extends AppCompatActivity {
         setContentView(R.layout.activity_org_join);
 
         Intent intent = getIntent();
-        String placeholder = intent.getStringExtra("orgKey");
+        String placeholder = intent.getStringExtra("toJoin");
         name = (TextView)findViewById(R.id.Name);
         name.setText(placeholder);
 
-        CodeID = findViewById(R.id.labelID);
-        Opassword = findViewById(R.id.labelPassword);
+        CodeID = findViewById(R.id.Code);
         String enteredID = CodeID.getText().toString();
-        String password = Opassword.getText().toString();
-
+        int codeCheck = Integer.parseInt(enteredID);
     }
 
     public void onRight(View view){
-        Intent i =new Intent(orgJoin.this, MainPageOrg.class);
+        String enteredID = CodeID.getText().toString();
+        int codeCheck = Integer.parseInt(enteredID);
+
+        if (codeCheck == 124421) {
+            Intent i = new Intent(orgJoin.this, MainPageOrg.class);
+            startActivity(i);
+
+            Intent b = new Intent(orgJoin.this, MainPageOrg.class);
+            b.putExtra("toManage", name.getText().toString());
+            startActivity(b);
+        }
+        else{
+            //Nothing
+        }
     }
 }
