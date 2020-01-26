@@ -28,7 +28,7 @@ public class orgJoin extends AppCompatActivity {
         name = (TextView)findViewById(R.id.Name);
         name.setText(placeholder);
 
-        CodeID = findViewById(R.id.labelId);
+        CodeID = findViewById(R.id.labelID);
         Opassword = findViewById(R.id.labelPassword);
         String enteredID = CodeID.getText().toString();
         String password = Opassword.getText().toString();

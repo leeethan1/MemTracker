@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.memtracker.R;
 
 public class organiserPage extends AppCompatActivity {
-
     TextView name;
 
     @Override
@@ -19,27 +18,30 @@ public class organiserPage extends AppCompatActivity {
         setContentView(R.layout.activity_organiser_page);
 
         Intent intent = getIntent();
-        String placeholder = intent.getStringExtra("orgKey");
         name = (TextView)findViewById(R.id.Name);
-        name.setText(placeholder);
+
+        String nameOfUser = intent.getStringExtra("orgKey");
+
+        name.setText(nameOfUser);
 
     }
 
     public void Creator(View view) {
         Intent i = new Intent(organiserPage.this, MainPageOrg.class);
+        i.putExtra("orgkey2", name.getText().toString());
         startActivity(i);
 
-        Intent b = new Intent(organiserPage.this, MainPageOrg.class);
-        b.putExtra("orgKey2", name.getText().toString());
-        startActivity(b);
+//        Intent b = new Intent(organiserPage.this, MainPageOrg.class);
+//        b.putExtra("orgKey2", name.getText().toString());
+//        startActivity(b);
     }
 
     public void Joiner(View view) {
-        Intent j = new Intent(organiserPage.this, orgJoin.class);
-        startActivity(j);
-
-        Intent c = new Intent(organiserPage.this, orgJoin.class);
-        c.putExtra("orgKey3", name.getText().toString());
-        startActivity(c);
+//        Intent j = new Intent(organiserPage.this, orgJoin.class);
+//        startActivity(j);
+//
+//        Intent c = new Intent(organiserPage.this, orgJoin.class);
+//        c.putExtra("orgKey3", nameOfUser);
+//        startActivity(c);
     }
 }

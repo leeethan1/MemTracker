@@ -1,3 +1,5 @@
+import com.example.memtracker.Event;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -18,7 +20,7 @@ import java.util.Objects;
 
 public class ProjectServer {
 
-    public static final int port = 69420;  // ( ͡° ͜ʖ ͡°)
+    public static final int port = 8000;
     public ServerSocket ss;
 
     public static void main(String[] args) {
