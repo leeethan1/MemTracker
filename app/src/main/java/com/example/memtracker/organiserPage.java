@@ -26,10 +26,10 @@ public class organiserPage extends AppCompatActivity {
     }
 
     public void Creator(View view) {
-        Intent i = new Intent(organiserPage.this, Organiser.class);
+        Intent i = new Intent(organiserPage.this, MainPageOrg.class);
         startActivity(i);
 
-        Intent b = new Intent(organiserPage.this, Organiser.class);
+        Intent b = new Intent(organiserPage.this, MainPageOrg.class);
         b.putExtra("orgKey2", name.getText().toString());
         startActivity(b);
     }
