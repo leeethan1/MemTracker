@@ -26,9 +26,8 @@ public class helperPage extends AppCompatActivity {
         Intent j = new Intent(helperPage.this, helpJoin.class);
         startActivity(j);
 
-        Intent b = new Intent(helperPage.this, MainPageHelp.class);
-        EditText input = findViewById(R.id.Name);
-        b.putExtra("toJoinUp2", input.getText().toString());
+        Intent b = new Intent(helperPage.this, helpJoin.class);
+        b.putExtra("toJoinUp2", name.getText().toString());
         startActivity(b);
     }
 }

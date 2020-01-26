@@ -19,7 +19,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         button = (Button)findViewById(R.id.button2);
         Intent intent = getIntent();
-        String placeholder = intent.getStringExtra("toJoinUp2");
+        String placeholder = intent.getStringExtra("toManage");
         name = (TextView) findViewById(R.id.Name);
         name.setText(placeholder);
 

@@ -19,7 +19,7 @@ import org.w3c.dom.Text;
 public class MainPageHelp extends AppCompatActivity {
     TextView name;
     Button button;
-    Button clickButton = (Button) findViewById(R.id.clickButton);
+    Button clickButton;
 
 
     @Override
@@ -29,7 +29,7 @@ public class MainPageHelp extends AppCompatActivity {
 
         button = (Button) findViewById(R.id.button2);
         Intent intent = getIntent();
-        String placeholder = intent.getStringExtra("toJoinUp2");
+        String placeholder = intent.getStringExtra("toManage4");
         name = (TextView) findViewById(R.id.Name);
         name.setText(placeholder);
 

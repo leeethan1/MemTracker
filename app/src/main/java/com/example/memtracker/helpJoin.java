@@ -14,16 +14,14 @@ public class helpJoin extends AppCompatActivity {
     TextView name;
     EditText CodeID;
 
-    @SuppressLint("WrongViewCast")
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help_join);
-        TextView name;
-        EditText CodeID;
+
         Intent intent = getIntent();
-        String placeholder = intent.getStringExtra("toJoin");
+        String placeholder = intent.getStringExtra("toJoinUp2");
         name = (TextView) findViewById(R.id.Name);
         name.setText(placeholder);
 
@@ -36,7 +34,7 @@ public class helpJoin extends AppCompatActivity {
         startActivity(i);
 
         Intent b = new Intent(helpJoin.this, MainPageHelp.class);
-        b.putExtra("toManage", name.getText().toString());
+        b.putExtra("toManage4", name.getText().toString());
         startActivity(b);
 
     }

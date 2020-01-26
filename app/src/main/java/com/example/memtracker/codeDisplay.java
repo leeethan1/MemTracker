@@ -62,6 +62,10 @@ public class codeDisplay extends AppCompatActivity {
         Intent i = new Intent(codeDisplay.this, Main2Activity.class);
         startActivity(i);
 
+        Intent b = new Intent(codeDisplay.this, Main2Activity.class);
+        b.putExtra("toManage", name.getText().toString());
+        startActivity(b);
+
     }
 
 }
