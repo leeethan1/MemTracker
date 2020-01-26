@@ -21,10 +21,13 @@ public class codeDisplay extends AppCompatActivity {
         Intent intent = getIntent();
         name = (TextView)findViewById(R.id.Name);
 
-        String nameOfUser = intent.getStringExtra("orgKey");
+        String nameOfUser = intent.getStringExtra("toDisplay");
 
         name.setText(nameOfUser);
 
+    }
+
+    public void onClick(View view){
         int code;
         Random random = new Random();
         do {
@@ -32,7 +35,7 @@ public class codeDisplay extends AppCompatActivity {
         } while (code < 99999);
 
         displayWindow = findViewById(R.id.displayWindow);
-
+        displayWindow.setText(Integer.toString(code));
     }
 
     public void Manager(View view) {

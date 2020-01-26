@@ -37,11 +37,11 @@ public class organiserPage extends AppCompatActivity {
     }
 
     public void Joiner(View view) {
-//        Intent j = new Intent(organiserPage.this, orgJoin.class);
-//        startActivity(j);
-//
-//        Intent c = new Intent(organiserPage.this, orgJoin.class);
-//        c.putExtra("toJoin", nameOfUser);
-//        startActivity(c);
+        Intent j = new Intent(organiserPage.this, orgJoin.class);
+        startActivity(j);
+
+        Intent c = new Intent(organiserPage.this, orgJoin.class);
+        c.putExtra("toJoin", nameOfUser);
+        startActivity(c);
     }
 }

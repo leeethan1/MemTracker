@@ -30,8 +30,5 @@ public class NameEntry extends AppCompatActivity {
         b.putExtra("orgKey", input.getText().toString());
         startActivity(b);
 
-//        Intent c = new Intent(NameEntry.this, organiserPage.class);
-//        c.putExtra("orgKeyIan", input.getText().toString());
-//        startActivity(c);
     }
 }
