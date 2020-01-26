@@ -4,4 +4,11 @@
     <string name="join_an_existing_event">Join an Existing Event</string>
     <string name="are_you_a">Are you a...</string>
     <string name="title_activity_main_page_org2">Map</string>
+    
+    <string-array name="ListNames">
+        <item>Nishant</item>
+        <item>Abhiram</item>
+        <item>Ian</item>
+        <item>Ethan</item>
+    </string-array>
 </resources>
