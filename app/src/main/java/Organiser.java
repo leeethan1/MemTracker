@@ -1,5 +1,3 @@
-package com.example.memtracker;
-
 import java.util.ArrayList;
 
 /**
