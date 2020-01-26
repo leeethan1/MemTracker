@@ -18,7 +18,7 @@ public class organiserPage extends AppCompatActivity {
         setContentView(R.layout.activity_organiser_page);
 
         Intent intent = getIntent();
-        name = (TextView)findViewById(R.id.Name);
+        name = (TextView)findViewById(R.id.label);
 
         String nameOfUser = intent.getStringExtra("orgKey");
 
