@@ -36,4 +36,9 @@ public class Main2Activity extends AppCompatActivity {
         startActivity(sendIntent);*/
 
     }
+
+    public void onClick2(View v){
+        Intent j = new Intent(Main2Activity.this,Listing.class);
+        startActivity(j);
+    }
 }

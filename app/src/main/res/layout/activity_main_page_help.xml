@@ -68,7 +68,7 @@
         android:layout_height="87dp"
         android:layout_marginLeft="8dp"
         android:background="@drawable/oval"
-        android:onClick="onClick"
+        android:onClick="onClick2"
         android:text="RALLY"
         android:textColor="#FFFFFF"
         android:textSize="30dp"
